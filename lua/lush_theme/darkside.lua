@@ -52,13 +52,13 @@ local c = {
     dark_gray =	hsl(222, 14, 18),           -- #272B34
     black =	hsl(220, 17, 14),               -- #1e222a
     dark_black = hsl(220, 18, 13),          -- #1b1f27
-    red = hsl(355, 58, 64),                 -- #D86E77
-    dark_red = hsl(5, 46, 45),              -- #A8473E 
-    green = hsl(94, 25, 49),                -- #789C5D
-    yellow = hsl(37, 51, 66),               -- #D4B27B
-    dark_yellow = hsl(29, 54, 60),          -- #D09762
-    blue = hsl(206, 54, 60),                -- #62A0D0
-    purple = hsl(296, 30, 60),              -- #B37AB8
+    red = hsl(355, 65, 65),                 -- #E06C75
+    dark_red = hsl(5, 48, 51),              -- #BE5046 
+    green = hsl(95, 38, 62),                -- #98C379
+    yellow = hsl(39, 67, 69),               -- #E5C07B
+    dark_yellow = hsl(29, 54, 61),          -- #D19A66
+    blue = hsl(207, 82, 66),                -- #61AFEF
+    purple = hsl(286, 60,67),              -- #C678DD
     cyan = hsl(187, 47, 55)                 -- #56B6C2
 }
 
@@ -97,8 +97,8 @@ local theme = lush(function()
     Folded       { fg = c.white }, -- line used for closed folds
     FoldColumn   {}, -- 'foldcolumn'
     SignColumn   {}, -- column where |signs| are displayed
-    IncSearch    { bg = c.blue, fg = c.black }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
-    Substitute   { bg = c.blue, fg = c.black }, -- |:substitute| replacement text highlighting
+    IncSearch    { bg = c.yellow, fg = c.black }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
+    Substitute   { bg = c.yellow, fg = c.black }, -- |:substitute| replacement text highlighting
     LineNr       { fg = c.light_gray }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
     CursorLineNr { fg = c.white }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     MatchParen   { gui = 'underline' }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
@@ -116,7 +116,7 @@ local theme = lush(function()
     PmenuThumb   { bg = c.light_gray }, -- Popup menu: Thumb of the scrollbar.
     Question     {}, -- |hit-enter| prompt and yes/no questions
     QuickFixLine {}, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
-    Search       { bg = c.blue, fg = c.black }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
+    Search       { bg = c.yellow, fg = c.black }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
     SpecialKey   {}, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
     SpellBad     {}, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise. 
     SpellCap     {}, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
@@ -326,7 +326,7 @@ local theme = lush(function()
     TelescopeBorder { fg = c.gray },
     TelescopePromptBorder { TelescopeBorder },
     TelescopePreviewBorder { TelescopeBorder },
-    TelescopeMatching { bg = c.blue, fg = c.black },
+    TelescopeMatching { bg = c.yellow, fg = c.black },
     TelescopePromptPrefix { fg = c.gray },
     TelescopePrompt {TelescopeNormal},
 
