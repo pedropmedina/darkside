@@ -52,14 +52,14 @@ local c = {
     dark_gray =	hsl(222, 14, 18),           -- #272B34
     black =	hsl(220, 17, 14),               -- #1e222a
     dark_black = hsl(220, 18, 13),          -- #1b1f27
-    red = hsl(355, 65, 65),                 -- #E06C75
+    red = hsl(354, 50, 66),                 -- #A3BE8C
     dark_red = hsl(5, 48, 51),              -- #BE5046 
-    green = hsl(95, 38, 62),                -- #98C379
-    yellow = hsl(39, 67, 69),               -- #E5C07B
+    green = hsl(92, 28, 65),                -- #A3BE8C
+    yellow = hsl(40, 67, 72),               -- #D47D85
     dark_yellow = hsl(29, 54, 61),          -- #D19A66
     blue = hsl(207, 82, 66),                -- #61AFEF
-    purple = hsl(286, 60,67),              -- #C678DD
-    cyan = hsl(187, 47, 55)                 -- #56B6C2
+    purple = hsl(282, 68, 71),              -- #C882E7
+    cyan = hsl(223, 70, 79)                 -- #A3B8EF
 }
 
 local theme = lush(function()
@@ -88,11 +88,11 @@ local theme = lush(function()
     DiffAdd      { fg = c.green }, -- diff mode: Added line |diff.txt|
     DiffChange   { fg = c.dark_yellow }, -- diff mode: Changed line |diff.txt|
     DiffDelete   { fg = c.red }, -- diff mode: Deleted line |diff.txt|
-    DiffText     { bg = c.red }, -- diff mode: Changed text within a changed line |diff.txt|
+    DiffText     { fg = c.red }, -- diff mode: Changed text within a changed line |diff.txt|
     EndOfBuffer  { fg = c.dark_gray }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
-    TermCursor   {}, -- cursor in a focused terminal
-    TermCursorNC {}, -- cursor in an unfocused terminal
-    ErrorMsg     { bg = c.red }, -- error messages on the command line
+    TermCursor   { Cursor }, -- cursor in a focused terminal
+    TermCursorNC { Cursor }, -- cursor in an unfocused terminal
+    ErrorMsg     { fg = c.red }, -- error messages on the command line
     VertSplit    { bg = c.black, fg = c.dark_gray }, -- the column separating vertically split windows
     Folded       { fg = c.white }, -- line used for closed folds
     FoldColumn   {}, -- 'foldcolumn'
@@ -103,7 +103,7 @@ local theme = lush(function()
     CursorLineNr { fg = c.white }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     MatchParen   { gui = 'underline' }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     ModeMsg      { fg = c.gray }, -- 'showmode' message (e.g., "-- INSERT -- ")
-    MsgArea      {}, -- Area for messages and cmdline
+    MsgArea      { fg = c.light_gray }, -- Area for messages and cmdline
     MsgSeparator {}, -- Separator for scrolled messages, `msgsep` flag of 'display'
     MoreMsg      { fg = c.green }, -- |more-prompt|
     NonText      { fg = c.light_gray }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
@@ -122,14 +122,14 @@ local theme = lush(function()
     SpellCap     {}, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
     SpellLocal   {}, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
     SpellRare    {}, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
-    StatusLine   { Normal }, -- status line of current window
-    StatusLineNC { Normal }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
-    TabLine      { Normal }, -- tab pages line, not active tab page label
-    TabLineFill  { Normal}, -- tab pages line, where there are no labels
-    TabLineSel   { Normal }, -- tab pages line, active tab page label
+    StatusLine   {}, -- status line of current window
+    StatusLineNC {}, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
+    TabLine      {}, -- tab pages line, not active tab page label
+    TabLineFill  {}, -- tab pages line, where there are no labels
+    TabLineSel   {}, -- tab pages line, active tab page label
     Title        { fg = c.green }, -- titles for output from ":set all", ":autocmd" etc.
     Visual       { bg = c.gray }, -- Visual mode selection
-    VisualNOS    { }, -- Visual mode selection when vim is "Not Owning the Selection".
+    VisualNOS    {}, -- Visual mode selection when vim is "Not Owning the Selection".
     WarningMsg   { fg = c.yellow }, -- warning messages
     Whitespace   {}, -- "nbsp", "space", "tab" and "trail" in 'listchars'
     WildMenu     { bg = c.yellow, fg = c.black }, -- current match in 'wildmenu' completion
