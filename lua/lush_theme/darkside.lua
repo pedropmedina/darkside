@@ -52,10 +52,10 @@ local c = {
     dark_gray =	hsl(222, 14, 18),           -- #272B34
     black =	hsl(220, 17, 14),               -- #1e222a
     dark_black = hsl(220, 18, 13),          -- #1b1f27
-    red = hsl(354, 50, 66),                 -- #A3BE8C
+    red = hsl(354, 50, 66),                 -- #D27E84
     dark_red = hsl(5, 48, 51),              -- #BE5046 
     green = hsl(92, 28, 65),                -- #A3BE8C
-    yellow = hsl(40, 67, 72),               -- #D47D85
+    yellow = hsl(40, 67, 72),               -- #E7C788
     dark_yellow = hsl(29, 54, 61),          -- #D19A66
     blue = hsl(207, 82, 66),                -- #61AFEF
     purple = hsl(282, 68, 71),              -- #C882E7
@@ -102,9 +102,9 @@ local theme = lush(function()
     LineNr       { fg = c.light_gray }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
     CursorLineNr { fg = c.white }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     MatchParen   { gui = 'underline' }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
-    ModeMsg      { fg = c.gray }, -- 'showmode' message (e.g., "-- INSERT -- ")
+    ModeMsg      { fg = c.light_gray }, -- 'showmode' message (e.g., "-- INSERT -- ")
     MsgArea      { fg = c.light_gray }, -- Area for messages and cmdline
-    MsgSeparator {}, -- Separator for scrolled messages, `msgsep` flag of 'display'
+    MsgSeparator { bg = c.dark_black }, -- Separator for scrolled messages, `msgsep` flag of 'display'
     MoreMsg      { fg = c.green }, -- |more-prompt|
     NonText      { fg = c.light_gray }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
     Normal       { bg = c.black, fg = c.white }, -- normal text
