@@ -323,7 +323,7 @@ local theme = lush(
 
             GitSignsAdd { DiffAdd },
             GitSignsChange { DiffChange },
-            GitSignsDelete { DiffDelete }
+            GitSignsDelete { DiffDelete },
 
             -----------------------------------------------------------------
             -- Treesitter Rainbow | https://github.com/p00f/nvim-ts-rainbow
