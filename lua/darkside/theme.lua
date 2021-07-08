@@ -41,6 +41,9 @@ local lush = require('lush')
 local colors = require('darkside/colors')
 local hsl = colors.hsl
 
+print('hex colors from darkside: ', vim.inspect(colors.hex))
+print('hls colors from darkside: ', vim.inspect(colors.hsl))
+
 local theme = lush(
                   function()
         return {
