@@ -17,5 +17,4 @@ let g:colors_name="darkside"
 lua package.loaded['darkside'] = nil
 
 " include our theme file and pass it to lush to apply
-lua require('lush')(require('darkside'))
-
+lua require('lush')(require('darkside').theme)
