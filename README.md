@@ -12,21 +12,21 @@ Beware this is a WIP... These colors might change often as I figure out what wor
 
 With that in mind, you're welcome to use it as you please!
 
-## Checkout Lush
+## Check Lush out
 
-This theme is built with [Lush](http://git.io/lush.nvim), a pretty nice colorscheme creation tool.
+This theme is built with [Lush](http://git.io/lush.nvim), a pretty nice colorscheme generator.
 
 ## Usage
 
 Since this is bare-bones, there aren't any configurations *yet*, you need to worry about.
-Just install and require 
+Just install and require. 
 
-### using packer 
+### Packer 
 
 ```lua
   use({ 'pedropmedina/darkside', requires = { 'rktjmp/lush.nvim' } })
 ```
-#### note: 
+#### Note: 
 
 You might want to set this somewhere in your config as well
 

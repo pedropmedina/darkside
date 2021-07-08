@@ -324,6 +324,17 @@ local theme = lush(
             GitSignsAdd { DiffAdd },
             GitSignsChange { DiffChange },
             GitSignsDelete { DiffDelete }
+
+            -----------------------------------------------------------------
+            -- Treesitter Rainbow | https://github.com/p00f/nvim-ts-rainbow
+            -----------------------------------------------------------------
+            rainbowcol1 { fg = 'blue' },
+            rainbowcol2 { fg = 'blue' },
+            rainbowcol3 { fg = 'blue' },
+            rainbowcol4 { fg = 'blue' },
+            rainbowcol5 { fg = 'blue' },
+            rainbowcol6 { fg = 'blue' },
+            rainbowcol7 { fg = 'blue' }
         }
     end
               )
