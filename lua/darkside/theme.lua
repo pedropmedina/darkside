@@ -38,7 +38,7 @@
 --
 --  `:lua require('lush').ify()`
 local lush = require('lush')
-local colors = require('theme/darkside/colors')
+local colors = require('darkside/colors')
 local hsl = colors.hsl
 
 local theme = lush(
