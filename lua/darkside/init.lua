@@ -1,6 +1,4 @@
 local theme = require('darkside.theme')
+local colors = require('darkside.colors')
 
-return {
-    theme = theme,
-    get_colors = function() require('darkside.colors') end
-}
+return { theme = theme, colors = colors }
