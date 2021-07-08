@@ -1,8 +1,7 @@
 # Darkside
 
 ## Overview
-Inspired by [onedark](https://github.com/joshdick/onedark.vim), 
-[NvChad](https://github.com/siduck76/NvChad), ... leveraging the power of lush.
+Inspired by [onedark](https://github.com/joshdick/onedark.vim)... leveraging the power of lush.
 
 ## Goal
 To have a nice looking theme that handles modern nvim features and plugins

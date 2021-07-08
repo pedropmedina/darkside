@@ -298,7 +298,7 @@ local theme = lush(
             TelescopeBorder { fg = hsl.gray },
             TelescopePromptBorder { TelescopeBorder },
             TelescopePreviewBorder { TelescopeBorder },
-            TelescopeMatching { bg = hsl.yellow, fg = hsl.black },
+            TelescopeMatching { fg = hsl.blue },
             TelescopePromptPrefix { fg = hsl.gray },
             TelescopePrompt { TelescopeNormal },
 
