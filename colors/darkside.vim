@@ -14,7 +14,7 @@ let g:colors_name="darkside"
 "
 " The performance impact of this call can be measured in the hundreds of
 " *nanoseconds* and such could be considered "production safe".
-lua package.loaded['darkside'] = nil
+lua package.loaded['theme/darkside'] = nil
 
 " include our theme file and pass it to lush to apply
-lua require('lush')(require('darkside').theme)
+lua require('lush')(require('theme/darkside').theme)

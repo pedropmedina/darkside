@@ -38,7 +38,7 @@
 --
 --  `:lua require('lush').ify()`
 local lush = require('lush')
-local colors = require('darkside/colors')
+local colors = require('theme/darkside/colors')
 local hsl = colors.hsl
 
 local theme = lush(
@@ -134,10 +134,10 @@ local theme = lush(
             Macro { fg = hsl.purple },
             PreCondit { fg = hsl.yellow },
 
-            Type { fg = hsl.yellow },
+            Type { fg = hsl.dark_yellow },
             StorageClass { fg = hsl.yellow },
             Structure { fg = hsl.yellow },
-            Typedef { fg = hsl.yellow },
+            Typedef { fg = hsl.dark_yellow },
 
             Special { fg = hsl.blue },
             SpecialChar { fg = hsl.yellow },

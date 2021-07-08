@@ -16,7 +16,7 @@ colors.hsl = {
     yellow = hsl(40, 67, 72),
     dark_yellow = hsl(29, 54, 61),
     blue = hsl(207, 82, 66),
-    purple = hsl(282, 68, 71),
+    purple = hsl(287, 34, 61),
     cyan = hsl(223, 70, 79)
 }
 
@@ -33,7 +33,7 @@ colors.hex = {
     yellow = '#E7C788',
     dark_yellow = '#D19A66',
     blue = '#61AFEF',
-    purple = '#C882E7',
+    purple = '#AE7ABD',
     cyan = '#A3B8EF'
 }
 
