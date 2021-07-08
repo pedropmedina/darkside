@@ -196,7 +196,7 @@ local theme = lush(
             TSBoolean { fg = hsl.yellow },
             TSCharacter { fg = hsl.green },
             TSComment { fg = hsl.light_gray, gui = 'italic' },
-            TSConstructor { fg = hsl.dark_yellow },
+            TSConstructor { fg = hsl.yellow },
             TSConditional { fg = hsl.purple },
             TSConstant { fg = hsl.dark_yellow },
             TSConstBuiltin { fg = hsl.yellow },
