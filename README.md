@@ -16,10 +16,7 @@ With that in mind, you're welcome to use it as you please!
 
 This theme is built with [Lush](http://git.io/lush.nvim), a pretty nice colorscheme generator.
 
-## Usage
-
-Since this is bare-bones, there aren't any configurations *yet*, you need to worry about.
-Just install and require. 
+## Installation
 
 ### Packer 
 
@@ -33,4 +30,16 @@ You might want to set this somewhere in your config as well
 ```lua
   vim.opt.background = 'dark'
   vim.g.colors_name = 'darkside'
+```
+
+## Usage
+
+Since this is bare-bones, there aren't any configurations *yet*, you need to worry about.
+Just install and require. 
+
+You can *reference theme colors* by accessing the color palette
+
+```lua
+  local darkside = require('darkside')
+  local colors = darkside.colors
 ```

@@ -313,12 +313,12 @@ local theme = lush(
             -- Treesitter Rainbow | https://github.com/p00f/nvim-ts-rainbow
             -----------------------------------------------------------------
             rainbowcol1 { fg = hsl.light_gray.li(20) },
-            rainbowcol2 { fg = hsl.blue },
-            rainbowcol3 { fg = hsl.red },
-            rainbowcol4 { fg = hsl.dark_red },
-            rainbowcol5 { fg = hsl.yellow },
-            rainbowcol6 { fg = hsl.dark_yellow },
-            rainbowcol7 { fg = hsl.green }
+            rainbowcol2 { fg = hsl.blue.li(20) },
+            rainbowcol3 { fg = hsl.red.li(20) },
+            rainbowcol4 { fg = hsl.dark_red.li(20) },
+            rainbowcol5 { fg = hsl.yellow.li(20) },
+            rainbowcol6 { fg = hsl.dark_yellow.li(20) },
+            rainbowcol7 { fg = hsl.green.li(20) }
         }
     end
               )
