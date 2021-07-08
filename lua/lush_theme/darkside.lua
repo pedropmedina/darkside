@@ -1,4 +1,3 @@
---
 -- Built with,
 --
 --        ,gggg,
@@ -61,219 +60,208 @@ local c = {
 local theme = lush(
                   function()
         return {
-            -- The following are all the Neovim default highlight groups from the docs
-            -- as of 0.5.0-nightly-446, to aid your theme creation. Your themes should
-            -- probably style all of these at a bare minimum.
-            --
-            -- Referenced/linked groups must come before being referenced/lined,
-            -- so the order shown ((mostly) alphabetical) is likely
-            -- not the order you will end up with.
-            --
-            -- You can uncomment these and leave them empty to disable any
-            -- styling for that group (meaning they mostly get styled as Normal)
-            -- or leave them commented to apply vims default colouring or linking.
+            -------------------------
+            --      Built-Ins
+            -------------------------
 
-            Comment { fg = c.light_gray, gui = 'italic' }, -- any comment
-            ColorColumn { bg = c.gray }, -- used for the columns set with 'colorcolumn'
-            Conceal { fg = c.yellow }, -- placeholder characters substituted for concealed text (see 'conceallevel')
-            Cursor { fg = c.white }, -- character under the cursor
-            lCursor {}, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
-            CursorIM { bg = c.dark_gray }, -- like Cursor, but used when in IME mode |CursorIM|
-            CursorColumn { bg = c.dark_gray }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
-            CursorLine { bg = c.dark_gray }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
-            Directory { bg = c.dark_gray }, -- directory names (and other special names in listings)
-            DiffAdd { fg = c.green }, -- diff mode: Added line |diff.txt|
-            DiffChange { fg = c.dark_yellow }, -- diff mode: Changed line |diff.txt|
-            DiffDelete { fg = c.red }, -- diff mode: Deleted line |diff.txt|
-            DiffText { fg = c.red }, -- diff mode: Changed text within a changed line |diff.txt|
-            EndOfBuffer { fg = c.dark_gray }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
-            TermCursor { Cursor }, -- cursor in a focused terminal
-            TermCursorNC { Cursor }, -- cursor in an unfocused terminal
-            ErrorMsg { fg = c.red }, -- error messages on the command line
-            VertSplit { bg = c.black, fg = c.dark_gray }, -- the column separating vertically split windows
-            Folded { fg = c.white }, -- line used for closed folds
-            FoldColumn {}, -- 'foldcolumn'
-            SignColumn {}, -- column where |signs| are displayed
-            IncSearch { bg = c.yellow, fg = c.black }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
-            Substitute { bg = c.yellow, fg = c.black }, -- |:substitute| replacement text highlighting
-            LineNr { fg = c.light_gray }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-            CursorLineNr { fg = c.white }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
-            MatchParen { gui = 'underline' }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
-            ModeMsg { fg = c.light_gray }, -- 'showmode' message (e.g., "-- INSERT -- ")
-            MsgArea { fg = c.light_gray }, -- Area for messages and cmdline
-            MsgSeparator { bg = c.dark_black }, -- Separator for scrolled messages, `msgsep` flag of 'display'
-            MoreMsg { fg = c.green }, -- |more-prompt|
-            NonText { fg = c.light_gray }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
-            Normal { bg = c.black, fg = c.white }, -- normal text
-            NormalFloat { bg = c.dark_gray }, -- Normal text in floating windows.
-            NormalNC { Normal }, -- normal text in non-current windows
-            Pmenu { bg = c.dark_gray }, -- Popup menu: normal item.
-            PmenuSel { bg = c.blue, fg = c.black }, -- Popup menu: selected item.
-            PmenuSbar { Pmenu }, -- Popup menu: scrollbar.
-            PmenuThumb { bg = c.light_gray }, -- Popup menu: Thumb of the scrollbar.
-            Question {}, -- |hit-enter| prompt and yes/no questions
-            QuickFixLine {}, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
-            Search { bg = c.yellow, fg = c.black }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
-            SpecialKey {}, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
-            SpellBad {}, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise. 
-            SpellCap {}, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
-            SpellLocal {}, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
-            SpellRare {}, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
-            StatusLine {}, -- status line of current window
-            StatusLineNC {}, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
-            TabLine {}, -- tab pages line, not active tab page label
-            TabLineFill {}, -- tab pages line, where there are no labels
-            TabLineSel {}, -- tab pages line, active tab page label
-            Title { fg = c.green }, -- titles for output from ":set all", ":autocmd" etc.
-            Visual { bg = c.gray }, -- Visual mode selection
-            VisualNOS {}, -- Visual mode selection when vim is "Not Owning the Selection".
-            WarningMsg { fg = c.yellow }, -- warning messages
-            Whitespace {}, -- "nbsp", "space", "tab" and "trail" in 'listchars'
-            WildMenu { bg = c.yellow, fg = c.black }, -- current match in 'wildmenu' completion
+            Comment { fg = c.light_gray, gui = 'italic' },
+            ColorColumn { bg = c.gray },
+            Conceal { fg = c.yellow },
+            Cursor { fg = c.white },
+            lCursor {},
+            CursorIM { bg = c.dark_gray },
+            CursorColumn { bg = c.dark_gray },
+            CursorLine { bg = c.dark_gray },
+            Directory { bg = c.dark_gray },
+            DiffAdd { fg = c.green },
+            DiffChange { fg = c.dark_yellow },
+            DiffDelete { fg = c.red },
+            DiffText { fg = c.red },
+            EndOfBuffer { fg = c.dark_gray },
+            TermCursor { Cursor },
+            TermCursorNC { Cursor },
+            ErrorMsg { fg = c.red },
+            VertSplit { bg = c.black, fg = c.dark_gray },
+            Folded { fg = c.white },
+            FoldColumn {},
+            SignColumn {},
+            IncSearch { bg = c.yellow, fg = c.black },
+            Substitute { bg = c.yellow, fg = c.black },
+            LineNr { fg = c.light_gray },
+            CursorLineNr { fg = c.white },
+            MatchParen { gui = 'underline' },
+            ModeMsg { fg = c.light_gray },
+            MsgArea { fg = c.light_gray },
+            MsgSeparator { bg = c.dark_black },
+            MoreMsg { fg = c.green },
+            NonText { fg = c.light_gray },
+            Normal { bg = c.black, fg = c.white },
+            NormalFloat { bg = c.dark_gray },
+            NormalNC { Normal },
+            Pmenu { bg = c.dark_gray },
+            PmenuSel { bg = c.blue, fg = c.black },
+            PmenuSbar { Pmenu },
+            PmenuThumb { bg = c.light_gray },
+            Question {},
+            QuickFixLine {},
+            Search { bg = c.yellow, fg = c.black },
+            SpecialKey {},
+            SpellBad {},
+            SpellCap {},
+            SpellLocal {},
+            SpellRare {},
+            StatusLine {},
+            StatusLineNC {},
+            TabLine {},
+            TabLineFill {},
+            TabLineSel {},
+            Title { fg = c.green },
+            Visual { bg = c.gray },
+            VisualNOS {},
+            WarningMsg { fg = c.yellow },
+            Whitespace {},
+            WildMenu { bg = c.yellow, fg = c.black },
 
-            -- These groups are not listed as default vim groups,
-            -- but they are defacto standard group names for syntax highlighting.
-            -- commented out groups should chain up to their "preferred" group by
-            -- default,
-            -- Uncomment and edit if you want more specific syntax highlighting.
+            ----------------------------
+            --      Conventions
+            ----------------------------
 
-            Constant { fg = c.cyan }, -- (preferred) any constant
-            String { fg = c.green }, --   a string constant: "this is a string"
-            Character { fg = c.green }, --  a character constant: 'c', '\n'
-            Number { fg = c.dark_yellow }, --   a number constant: 234, 0xff
-            Boolean { fg = c.dark_red }, --  a boolean constant: TRUE, false
-            Float { fg = c.dark_yellow }, --    a floating point constant: 2.3e10
+            Constant { fg = c.cyan },
+            String { fg = c.green },
+            Character { fg = c.green },
+            Number { fg = c.dark_yellow },
+            Boolean { fg = c.dark_red },
+            Float { fg = c.dark_yellow },
 
-            Identifier { fg = c.purple }, -- (preferred) any variable name
-            Function { fg = c.blue }, -- function name (also: methods for classes)
+            Identifier { fg = c.purple },
+            Function { fg = c.blue },
 
-            Statement { fg = c.purple }, -- (preferred) any statement
-            Conditional { fg = c.purple }, --  if, then, else, endif, switch, etc.
-            Repeat { fg = c.purple }, --   for, do, while, etc.
-            Label { fg = c.red }, --    case, default, etc.
-            Operator { fg = c.cyan }, -- "sizeof", "+", "*", etc.
-            Keyword { fg = c.red }, --  any other keyword
-            Exception { fg = c.purple }, --  try, catch, throw
+            Statement { fg = c.purple },
+            Conditional { fg = c.purple },
+            Repeat { fg = c.purple },
+            Label { fg = c.red },
+            Operator { fg = c.cyan },
+            Keyword { fg = c.red },
+            Exception { fg = c.purple },
 
-            PreProc { fg = c.yellow }, -- (preferred) generic Preprocessor
-            Include { fg = c.purple }, --  preprocessor #include
-            Define { fg = c.purple }, --   preprocessor #define
-            Macro { fg = c.purple }, --    same as Define
-            PreCondit { fg = c.yellow }, --  preprocessor #if, #else, #endif, etc.
+            PreProc { fg = c.yellow },
+            Include { fg = c.purple },
+            Define { fg = c.purple },
+            Macro { fg = c.purple },
+            PreCondit { fg = c.yellow },
 
-            Type { fg = c.yellow }, -- (preferred) int, long, char, etc.
-            StorageClass { fg = c.yellow }, -- static, register, volatile, etc.
-            Structure { fg = c.yellow }, --  struct, union, enum, etc.
-            Typedef { fg = c.yellow }, --  A typedef
+            Type { fg = c.yellow },
+            StorageClass { fg = c.yellow },
+            Structure { fg = c.yellow },
+            Typedef { fg = c.yellow },
 
-            Special { fg = c.blue }, -- (preferred) any special symbol
-            SpecialChar { fg = c.yellow }, --  special character in a constant
-            Tag {}, --    you can use CTRL-] on this
-            Delimiter { fg = c.white }, --  character that needs attention
-            SpecialComment { fg = c.gray }, -- special things inside a comment
-            Debug {}, --    debugging statements
+            Special { fg = c.blue },
+            SpecialChar { fg = c.yellow },
+            Tag {},
+            Delimiter { fg = c.white },
+            SpecialComment { fg = c.gray },
+            Debug {},
 
-            Underlined { fg = c.blue, gui = 'underline' }, -- (preferred) text that stands out, HTML links
+            Underlined { fg = c.blue, gui = 'underline' },
             Bold { gui = 'bold' },
             Italic { gui = 'italic' },
 
-            -- ("Ignore", below, may be invisible...)
-            -- Ignore         { }, -- (preferred) left blank, hidden  |hl-Ignore|
-            Error { fg = c.red }, -- (preferred) any erroneous construct
-            Todo { fg = c.purple }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+            Ignore {},
+            Error { fg = c.red },
+            Todo { fg = c.purple },
 
-            -- These groups are for the native LSP client. Some other LSP clients may
-            -- use these groups, or use their own. Consult your LSP client's
-            -- documentation.
+            ------------------------------
+            -- Native LSP client groups
+            ------------------------------
 
-            LspReferenceText { fg = c.gray }, -- used for highlighting "text" references
-            LspReferenceRead { LspReferenceText }, -- used for highlighting "read" references
-            LspReferenceWrite { LspReferenceText }, -- used for highlighting "write" references
+            LspReferenceText { fg = c.gray },
+            LspReferenceRead { LspReferenceText },
+            LspReferenceWrite { LspReferenceText },
 
-            LspDiagnosticsDefaultError { fg = c.red }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-            LspDiagnosticsDefaultWarning { fg = c.yellow }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-            LspDiagnosticsDefaultInformation { fg = c.blue }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-            LspDiagnosticsDefaultHint { fg = c.cyan }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+            LspDiagnosticsDefaultError { fg = c.red },
+            LspDiagnosticsDefaultWarning { fg = c.yellow },
+            LspDiagnosticsDefaultInformation { fg = c.blue },
+            LspDiagnosticsDefaultHint { fg = c.cyan },
 
-            -- LspDiagnosticsVirtualTextError       {}, -- Used for "Error" diagnostic virtual text
-            -- LspDiagnosticsVirtualTextWarning     {}, -- Used for "Warning" diagnostic virtual text
-            -- LspDiagnosticsVirtualTextInformation {}, -- Used for "Information" diagnostic virtual text
-            -- LspDiagnosticsVirtualTextHint        {}, -- Used for "Hint" diagnostic virtual text
+            -- LspDiagnosticsVirtualTextError       {},
+            -- LspDiagnosticsVirtualTextWarning     {},
+            -- LspDiagnosticsVirtualTextInformation {},
+            -- LspDiagnosticsVirtualTextHint        {},
 
-            LspDiagnosticsUnderlineError { LspDiagnosticsDefaultError, gui = 'underline' }, -- Used to underline "Error" diagnostics
-            LspDiagnosticsUnderlineWarning { LspDiagnosticsDefaultWarning, gui = 'underline' }, -- Used to underline "Warning" diagnostics
-            LspDiagnosticsUnderlineInformation { LspDiagnosticsDefaultInformation, gui = 'underline' }, -- Used to underline "Information" diagnostics
-            LspDiagnosticsUnderlineHint { LspDiagnosticsDefaultHint, gui = 'underline' }, -- Used to underline "Hint" diagnostics
+            LspDiagnosticsUnderlineError { LspDiagnosticsDefaultError, gui = 'underline' },
+            LspDiagnosticsUnderlineWarning { LspDiagnosticsDefaultWarning, gui = 'underline' },
+            LspDiagnosticsUnderlineInformation { LspDiagnosticsDefaultInformation, gui = 'underline' },
+            LspDiagnosticsUnderlineHint { LspDiagnosticsDefaultHint, gui = 'underline' },
 
-            -- LspDiagnosticsFloatingError          {}, -- Used to color "Error" diagnostic messages in diagnostics float
-            -- LspDiagnosticsFloatingWarning        {}, -- Used to color "Warning" diagnostic messages in diagnostics float
-            -- LspDiagnosticsFloatingInformation    {}, -- Used to color "Information" diagnostic messages in diagnostics float
-            -- LspDiagnosticsFloatingHint           {}, -- Used to color "Hint" diagnostic messages in diagnostics float
+            -- LspDiagnosticsFloatingError          {},
+            -- LspDiagnosticsFloatingWarning        {},
+            -- LspDiagnosticsFloatingInformation    {},
+            -- LspDiagnosticsFloatingHint           {},
 
-            -- LspDiagnosticsSignError              {}, -- Used for "Error" signs in sign column
-            -- LspDiagnosticsSignWarning            {}, -- Used for "Warning" signs in sign column
-            -- LspDiagnosticsSignInformation        {}, -- Used for "Information" signs in sign column
-            -- LspDiagnosticsSignHint               {}, -- Used for "Hint" signs in sign column
+            -- LspDiagnosticsSignError              {},
+            -- LspDiagnosticsSignWarning            {},
+            -- LspDiagnosticsSignInformation        {},
+            -- LspDiagnosticsSignHint               {},
 
-            -- These groups are for the neovim tree-sitter highlights.
-            -- As of writing, tree-sitter support is a WIP, group names may change.
-            -- By default, most of these groups link to an appropriate Vim group,
-            -- TSError -> Error for example, so you do not have to define these unless
-            -- you explicitly want to support Treesitter's improved syntax awareness.
+            -----------------------------------
+            -- Neovim tree-sitter highlights
+            -----------------------------------
 
-            TSAnnotation { fg = c.red }, -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
-            TSAttribute { fg = c.yellow }, -- (unstable) TODO: docs
-            TSBoolean { fg = c.yellow }, -- For booleans.
-            TSCharacter { fg = c.green }, -- For characters.
-            TSComment { fg = c.light_gray, gui = 'italic' }, -- For comment blocks.
-            TSConstructor { fg = c.yellow }, -- For constructor calls and definitions: ` { }` in Lua, and Java constructors.
-            TSConditional { fg = c.purple }, -- For keywords related to conditionnals.
-            TSConstant { fg = c.dark_yellow }, -- For constants
-            TSConstBuiltin { fg = c.yellow }, -- For constant that are built in the language: `nil` in Lua.
-            TSConstMacro { fg = c.yellow }, -- For constants that are defined by macros: `NULL` in C.
-            TSError { fg = c.red }, -- For syntax/parser errors.
-            TSException { fg = c.green }, -- For exception related keywords.
-            TSField { fg = c.red }, -- For fields.
-            TSFloat { fg = c.yellow }, -- For floats.
-            TSFunction { fg = c.blue }, -- For function (calls and definitions).
-            TSFuncBuiltin { fg = c.blue }, -- For builtin functions: `table.insert` in Lua.
-            TSFuncMacro { fg = c.blue }, -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
-            TSInclude { fg = c.purple }, -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
-            TSKeyword { fg = c.purple }, -- For keywords that don't fall in previous categories.
-            TSKeywordFunction { fg = c.blue }, -- For keywords used to define a fuction.
-            TSLabel { fg = c.purple }, -- For labels: `label:` in C and `:label:` in Lua.
-            TSMethod { fg = c.blue }, -- For method calls and definitions.
-            TSNamespace { fg = c.purple }, -- For identifiers referring to modules and namespaces.
-            TSNone { fg = c.yellow }, -- TODO: docs
-            TSNumber { fg = c.yellow }, -- For all numbers
-            TSOperator { fg = c.white }, -- For any operator: `+`, but also `->` and `*` in C.
-            TSParameter { fg = c.yellow, gui = 'italic' }, -- For parameters of a function.
-            TSParameterReference { fg = c.yellow }, -- For references to parameters of a function.
-            TSProperty { fg = c.red }, -- Same as `TSField`.
-            TSPunctDelimiter { fg = c.white }, -- For delimiters ie: `.`
-            TSPunctBracket { fg = c.red }, -- For brackets and parens.
-            TSPunctSpecial { fg = c.white }, -- For special punctutation that does not fall in the catagories before.
-            TSRepeat { fg = c.purple }, -- For keywords related to loops.
-            TSString { fg = c.green }, -- For strings.
-            TSStringRegex { fg = c.green }, -- For regexes.
-            TSStringEscape { fg = c.cyan }, -- For escape characters within a string.
-            TSSymbol { fg = c.red }, -- For identifiers referring to symbols or atoms.
-            TSType { fg = c.yellow }, -- For types.
-            TSTypeBuiltin { fg = c.red }, -- For builtin types.
-            TSVariable { fg = c.white }, -- Any variable name that does not have another highlight.
-            TSVariableBuiltin { fg = c.yellow }, -- Variable names that are defined by the languages, like `this` or `self`.
+            TSAnnotation { fg = c.red },
+            TSAttribute { fg = c.yellow },
+            TSBoolean { fg = c.yellow },
+            TSCharacter { fg = c.green },
+            TSComment { fg = c.light_gray, gui = 'italic' },
+            TSConstructor { fg = c.yellow },
+            TSConditional { fg = c.purple },
+            TSConstant { fg = c.dark_yellow },
+            TSConstBuiltin { fg = c.yellow },
+            TSConstMacro { fg = c.yellow },
+            TSError { fg = c.red },
+            TSException { fg = c.green },
+            TSField { fg = c.red },
+            TSFloat { fg = c.yellow },
+            TSFunction { fg = c.blue },
+            TSFuncBuiltin { fg = c.blue },
+            TSFuncMacro { fg = c.blue },
+            TSInclude { fg = c.purple },
+            TSKeyword { fg = c.purple },
+            TSKeywordFunction { fg = c.blue },
+            TSLabel { fg = c.purple },
+            TSMethod { fg = c.blue },
+            TSNamespace { fg = c.purple },
+            TSNone { fg = c.yellow },
+            TSNumber { fg = c.yellow },
+            TSOperator { fg = c.white },
+            TSParameter { fg = c.yellow, gui = 'italic' },
+            TSParameterReference { fg = c.yellow },
+            TSProperty { fg = c.red },
+            TSPunctDelimiter { fg = c.white },
+            TSPunctBracket { fg = c.red },
+            TSPunctSpecial { fg = c.white },
+            TSRepeat { fg = c.purple },
+            TSString { fg = c.green },
+            TSStringRegex { fg = c.green },
+            TSStringEscape { fg = c.cyan },
+            TSSymbol { fg = c.red },
+            TSType { fg = c.yellow },
+            TSTypeBuiltin { fg = c.red },
+            TSVariable { fg = c.white },
+            TSVariableBuiltin { fg = c.yellow },
 
-            TSTag { fg = c.red }, -- Tags like html tag names.
-            TSTagDelimiter { fg = c.white }, -- Tag delimiter like `<` `>` `/`
-            TSText { fg = c.white }, -- For strings considered text in a markup language.
-            TSEmphasis { fg = c.yellow }, -- For text to be represented with emphasis.
-            TSUnderline { fg = c.yellow }, -- For text to be represented with an underline.
-            TSStrike { fg = c.white }, -- For strikethrough text.
-            TSTitle { fg = c.yellow }, -- Text that is part of a title.
-            TSLiteral { fg = c.yellow }, -- Literal text.
-            TSURI { fg = c.blue }, -- Any URI like a link or email.
+            TSTag { fg = c.red },
+            TSTagDelimiter { fg = c.white },
+            TSText { fg = c.white },
+            TSEmphasis { fg = c.yellow },
+            TSUnderline { fg = c.yellow },
+            TSStrike { fg = c.white },
+            TSTitle { fg = c.yellow },
+            TSLiteral { fg = c.yellow },
+            TSURI { fg = c.blue },
 
+            -------------------------------------------------------------
             -- Nvim tree | https://github.com/kyazdani42/nvim-tree.lua
+            -------------------------------------------------------------
 
             NvimTreeNormal { bg = c.dark_black, fg = c.white },
             NvimTreeEndOfBuffer { bg = c.dark_black, fg = c.dark_black },
@@ -314,7 +302,9 @@ local theme = lush(
             NvimTreeGitRenamed { fg = c.yellow },
             NvimTreeGitNew { fg = c.purple },
 
+            ------------------------------------------------------------------
             -- Telescope | https://github.com/nvim-telescope/telescope.nvim
+            ------------------------------------------------------------------
 
             TelescopeSelection { bg = c.gray },
             TelescopeSelectionCaret { fg = c.gray },
@@ -327,7 +317,9 @@ local theme = lush(
             TelescopePromptPrefix { fg = c.gray },
             TelescopePrompt { TelescopeNormal },
 
+            -----------------------------------------------------------
             -- GitSigns | https://github.com/lewis6991/gitsigns.nvim
+            -----------------------------------------------------------
 
             GitSignsAdd { DiffAdd },
             GitSignsChange { DiffChange },
@@ -336,7 +328,4 @@ local theme = lush(
     end
               )
 
--- return our parsed theme for extension or use else where.
 return theme
-
--- vi:nowrap

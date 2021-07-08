@@ -1,5 +1,36 @@
-A Lush Theme for Neovim.
-===
+# Darkside
 
-See: http://git.io/lush.nvim for more information on Lush and a helper script
-to setup your repo clone.
+## Overview
+Inspired by [onedark](https://github.com/joshdick/onedark.vim), 
+[NvChad](https://github.com/siduck76/NvChad), ... leveraging the power of lush.
+
+## Goal
+To have a nice looking theme that handles modern nvim features and plugins
+such as LSP, treesitter, telescope, nvim-tree... with fewer highlights done in the cofig.
+
+Beware this is a WIP... These colors might change often as I figure out what works best for my daily use.
+
+With that in mind, you're welcome to use it as you please!
+
+## Checkout Lush
+
+This theme is built with [Lush](http://git.io/lush.nvim), a pretty nice colorscheme creation tool.
+
+## Usage
+
+Since this is bare-bones, there aren't any configurations *yet*, you need to worry about.
+Just install and require 
+
+### using packer 
+
+```lua
+  use({ 'pedropmedina/darkside', requires = { 'rktjmp/lush.nvim' } })
+```
+#### note: 
+
+You might want to set this somewhere in your config as well
+
+```lua
+  vim.opt.background = 'dark'
+  vim.g.colors_name = 'darkside'
+```
