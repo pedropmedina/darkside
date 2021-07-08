@@ -41,9 +41,6 @@ local lush = require('lush')
 local colors = require('darkside/colors')
 local hsl = colors.hsl
 
-print('hex colors from darkside: ', vim.inspect(colors.hex))
-print('hls colors from darkside: ', vim.inspect(colors.hsl))
-
 local theme = lush(
                   function()
         return {
@@ -315,13 +312,13 @@ local theme = lush(
             -----------------------------------------------------------------
             -- Treesitter Rainbow | https://github.com/p00f/nvim-ts-rainbow
             -----------------------------------------------------------------
-            rainbowcol1 { fg = 'blue' },
-            rainbowcol2 { fg = 'blue' },
-            rainbowcol3 { fg = 'blue' },
-            rainbowcol4 { fg = 'blue' },
-            rainbowcol5 { fg = 'blue' },
-            rainbowcol6 { fg = 'blue' },
-            rainbowcol7 { fg = 'blue' }
+            rainbowcol1 { fg = hsl.light_gray.li(20) },
+            rainbowcol2 { fg = hsl.blue },
+            rainbowcol3 { fg = hsl.red },
+            rainbowcol4 { fg = hsl.dark_red },
+            rainbowcol5 { fg = hsl.yellow },
+            rainbowcol6 { fg = hsl.dark_yellow },
+            rainbowcol7 { fg = hsl.green }
         }
     end
               )
