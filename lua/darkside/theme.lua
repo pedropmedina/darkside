@@ -120,7 +120,7 @@ local theme = lush(function()
 		MoreMsg({ fg = hsl.green }),
 		NonText({ fg = hsl.light_gray }),
 		Normal({ bg = hsl.black, fg = hsl.white }),
-		NormalFloat({ bg = hsl.dark_gray }),
+		NormalFloat({ bg = hsl.dark_gray.da(15) }),
 		NormalNC({ Normal }),
 		Pmenu({ bg = hsl.dark_gray }),
 		PmenuSel({ bg = hsl.blue, fg = hsl.black }),
@@ -171,6 +171,16 @@ local theme = lush(function()
 		DiagnosticSignWarn({ DiagnosticWarn }),
 		DiagnosticSignInfo({ DiagnosticInfo }),
 		DiagnosticSignHint({ DiagnosticHint }),
+
+		---------------------------------------------------
+		-- Nvim cmp | https://github.com/hrsh7th/nvim-cmp
+		---------------------------------------------------
+
+		CmpItemMenu({ fg = hsl.light_gray }),
+		CmpItemKind({ fg = hsl.light_gray }),
+		CmpItemAbbrMatchFuzzy({ fg = hsl.blue }),
+		CmpItemAbbrMatch({ fg = hsl.blue }),
+		CmpItemAbbr({ fg = hsl.white }),
 
 		-----------------------------------
 		-- Neovim tree-sitter highlights
