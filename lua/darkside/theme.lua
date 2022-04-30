@@ -285,16 +285,19 @@ local theme = lush(function()
 		-- Telescope | https://github.com/nvim-telescope/telescope.nvim
 		------------------------------------------------------------------
 
-		TelescopeSelection({ bg = hsl.gray }),
+		TelescopeSelection({ bg = hsl.dark_gray }),
 		TelescopeSelectionCaret({ fg = hsl.gray }),
 		TelescopeMultiSelection({ fg = hsl.gray }),
-		TelescopeNormal({ fg = hsl.white }),
-		TelescopeBorder({ fg = hsl.gray }),
-		TelescopePromptBorder({ TelescopeBorder }),
+		TelescopeNormal({ fg = hsl.white, bg = hsl.dark_black }),
+		TelescopeBorder({ fg = hsl.gray, bg = hsl.dark_black }),
 		TelescopePreviewBorder({ TelescopeBorder }),
+		TelescopePromptPrefix({ fg = hsl.dark_black }),
+		TelescopePromptBorder({ bg = hsl.dark_gray }),
+		TelescopePromptNormal({ bg = hsl.dark_gray, fg = hsl.white }),
 		TelescopeMatching({ fg = hsl.yellow, gui = "underline" }),
-		TelescopePromptPrefix({ fg = hsl.gray }),
-		TelescopePrompt({ TelescopeNormal }),
+		TelescopePromptTitle({ fg = hsl.gray, bg = hsl.dark_black }),
+		TelescopeResultsTitle({ fg = hsl.dark_black, bg = hsl.dark_black }),
+		TelescopePreviewTitle({ fg = hsl.dark_black, bg = hsl.dark_black }),
 
 		-----------------------------------------------------------
 		-- GitSigns | https://github.com/lewis6991/gitsigns.nvim
