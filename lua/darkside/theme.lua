@@ -135,7 +135,7 @@ local theme = lush(function()
 		SpellLocal({ fg = hsl.dark_yellow }),
 		SpellRare({ fg = hsl.dark_yellow }),
 		StatusLine({ bg = hsl.dark_black }),
-		StatusLineNC({ bg = hsl.dark_black }),
+		StatusLineNC({ bg = hsl.black }),
 		TabLineFill({ bg = hsl.dark_gray }),
 		TabLine({ bg = hsl.dark_gray, fg = hsl.light_gray }),
 		TabLineSel({ bg = hsl.dark_gray, fg = hsl.green }),
